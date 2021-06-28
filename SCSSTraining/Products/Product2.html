@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style/change.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+    <script src="../scripts/ResponsiveMenu.js"></script>
+
+</head>
+<body class="background">
+<header>
+    <nav>
+        <a href="../Home.html"><img src="../Images/logo.png" alt="logo" class="logo"></a>
+        <button id="theme-button">Dark</button>
+        <script src="../scripts/dark.js"></script>
+        <form class="formsearch">
+            <label><input type="text" name="Search" class="search"></label>
+            <label><input type="submit" name="submit" class="search-button" value=""></label>
+        </form>
+        <ul class="navigation" id="menu">
+            <li><a href="../Home.html">Home</a></li>
+            <li><a href="../Shop.html">Shop</a></li>
+            <li><a href="../Contact.html">Contact</a></li>
+            <li><a href="../Login.html">Log in</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="burger"  onclick="Responsive()"> <span class="fa fa-bars"></span> </a>
+    </nav>
+</header>
+<div class="main">
+    <div class="image-panel">
+        <ul id="image-list">
+            <li id="pic1">
+                <img  alt="product" src="../Images/Product2/Image.jpg">
+                <img class="bigpic" alt="bigpic" src="../Images/Product2/Image.jpg">
+            </li>
+            <li id="pic2">
+                <img alt="product" src="../Images/Product2/Image1.jpg">
+                <img class="bigpic" alt="bigpic" src="../Images/Product2/Image1.jpg">
+            </li>
+            <li id="pic3">
+                <img alt="product" src="../Images/Product2/Image2.jpg">
+                <img class="bigpic" alt="bigpic" src="../Images/Product2/Image2.jpg">
+            </li>
+            <li id="pic4">
+                <img alt="product" src="../Images/Product2/Image3.jpg">
+                <img class="bigpic" alt="bigpic" src="../Images/Product2/Image3.jpg">
+            </li>
+            <li id="pic5">
+                <img alt="product" src="../Images/Product2/Image4.jpg">
+                <img class="bigpic" alt="bigpic" src="../Images/Product2/Image4.jpg">
+            </li>
+        </ul>
+        <script src="../scripts/Image_Display.js"></script>
+    </div>
+    <hr>
+    <div class="product-info">
+        <h1>
+            Nintendo Switch – Neon Red and Neon Blue Joy-Con
+        </h1>
+        <div class="raiting"></div>
+        <div class="Price">
+            <span>Price: </span><span class="tag">$ 273.40</span>
+        </div>
+        <div class="Choose-specs">
+            <div class="color">
+                <span>Color: </span>
+                <ul>
+                    <li>
+                        <label><span>Black</span><input type="radio" name="product-color" value="black"></label>
+                    </li>
+                    <li>
+                        <label><span>White</span><input type="radio" name="product-color" value="product-color"></label>
+                    </li>
+                    <li>
+                        <label><span>Gold</span><input type="radio" name="product-color" value="product-color"></label>
+                    </li>
+                </ul>
+            </div>
+            <div class="shipping">
+                <div>
+                    <span>Ships from:</span> <span>China</span>
+                </div>
+                <div>
+                    <span class="cost">Shiping Cost:</span> <span>$3.99</span>
+                </div>
+            </div>
+            <div class="buy-button">
+                <button type="submit" class="buy-now">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="additional-info">
+    <ul class="info-menu">
+        <li>
+            <span>Specifications</span>
+        </li>
+        <li>
+            <span>Overview</span>
+        </li>
+        <li>
+            <span>Reviews</span>
+        </li>
+    </ul>
+    <div class="Specifications">
+        <ul>
+            <li>
+                <span>Gender: </span> <span>Male-Male</span>
+            </li>
+            <li>
+                <span>Connector A:</span> <span>HDMI</span>
+            </li>
+            <li>
+                <span>Type</span> <span>HDMMI Cables</span>
+            </li>
+            <li>
+                <span>Outer Diameter:</span> <span> 7.3mm</span>
+            </li>
+            <li>
+                <span>Package:</span> <span>Yes</span>
+            </li>
+            <li>
+                <span>Feature:</span> <span> HDMI2.0</span>
+            </li>
+            <li>
+                <span>Type</span> <span>Audio video cable</span>
+            </li>
+            <li>
+                <span>Connector B:</span> <span> HDMI 4K</span>
+            </li>
+            <li>
+                <span>Resolution A</span> <span>: 3D hdmi cable</span>
+            </li>
+            <li>
+                <span>Usage 1:</span> <span> For apple tv/Nintendo Switch</span>
+            </li>
+            <li>
+                <span>Model Number:</span> <span> HD102/HD101</span>
+            </li>
+            <li>
+                <span>Version:</span> <span> HDMI 1.4</span>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

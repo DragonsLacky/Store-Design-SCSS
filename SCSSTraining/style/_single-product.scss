@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,400&display=swap');
+$size: 60px;
+
+.main {
+  background: lighten($light * 0.7  , 20);
+  @include border-radius(10px);
+  display: grid;
+  grid-template-rows: 500px auto;
+  grid-template-columns: 501fr 40px 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 1400px;
+  margin: auto;
+  padding: $size + 50px + 5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 10px;
+}
+.bigpic{
+  display: none;
+}
+.image-panel{
+  display: inline-block;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin-left: auto;
+  ul{
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    height: 480px;
+    width: 496px;
+    background: darken($bg-color3, 30);
+    @include border-radius(10px);
+  }
+  li{
+    width: $size;
+    height: $size;
+    padding: 10px;
+    background: darken($light, 40);
+    position: relative;
+    left: -$size - 20px - 3px;
+    img:first-child{
+      width: $size;
+      height: $size;
+      @include border-radius(10px);
+      border: 2px solid $dark;
+    }
+    &.keep{
+      .bigpic{
+        display: inline-block;
+        position: absolute;
+        left: $size + 20px + 12px + 9px;
+        height: 450px;
+        width: 450px;
+        margin-top: 14px;
+      }
+      @for $i from 1 through 10{
+        &:nth-child(#{$i}){
+          .bigpic{
+            top: -(($i) * ($size+20px) - 80px);
+          }
+        }
+      }
+      background: #FFFFFF * 0.3;
+    }
+  }
+}
+.product-info{
+  margin: 0;
+  background: $light;
+  color: $dark;
+  display: inline-block;
+  font-family: "PT Sans", Arial sans-serif;
+  font-weight: 200;
+  @include border-radius(10px);
+  border: 0.1px;
+  width: 600px;
+  h1{
+    margin-left: 20px;
+    display: inline-block;
+    height: 100px;
+    font-weight: normal;
+    font-size: 6mm;
+  }
+  .Choose-specs{
+    border-top: 1px solid $dark;
+    background: $bg-color3;
+  }
+  .Price{
+    @include span-style;
+    font-size: 7mm;
+  }
+  ul{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    li{
+      display: inline-block;
+      width: 80px;
+    }
+  }
+  .tag{
+    font-size: 10mm;
+    margin-left: 50px;
+    color: $Price-text-color;
+  }
+  .color{
+    @include span-style-font;
+    label{
+      display: inline-block;
+      color: #000000;
+      position: relative;
+      top: -7px;
+      padding-bottom: 20px;
+      span{
+        display: inline-block;
+        position: absolute;
+        margin-left: 35px;
+        margin-top: 4px;
+        z-index: 4;
+      }
+      input{
+        @include appearance;
+        z-index: 3;
+        display: inline-block;
+        margin-left: 20px;
+        box-sizing: border-box;
+        padding: 15px;
+        position: absolute;
+        width: 80px;
+        @include border-radius(10px);
+        border: 0.3px solid $bg-color-checkbox;
+        background: #FFFFFF;
+        color: #000000;
+        &:hover{
+          cursor: pointer;
+        }
+        &:checked{
+          box-sizing: border-box;
+          border: 2px solid $Price-text-color;
+          outline: transparent;
+        }
+        &:active{
+          @include appearance;
+        }
+       }
+      &:hover{
+        cursor: pointer;
+      }
+      span:hover + input{
+        box-sizing: border-box;
+        border: 2px solid $Price-text-color;
+      }
+    }
+  }
+  .shipping{
+    @include span-style-font;
+    div{
+      @include span-style;
+      padding-left: 0;
+      & + div span + span{
+        color: $Price-text-color;
+        font-size: 7mm;
+      }
+      &:first-child{
+        span + span{
+          margin-left: 10px;
+          background: $light;
+          @include border-radius(15px);
+          border-color: #350ea2;
+          box-sizing: border-box;
+          padding: 4px;
+          &:hover{
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+  .buy-button{
+    box-sizing: border-box;
+    padding: 10px;
+    .buy-now{
+      @include appearance;
+      @include border-radius(5px);
+      margin-left: 10px;
+      box-sizing: border-box;
+      border: 2px solid transparent;
+      padding: 15px;
+      background: $Price-text-color;
+      font-size: 8mm;
+      color: #FFFFFF;
+      font-weight: bold;
+      font-family: 'PT Sans', Arial, sans-serif;
+      outline: none;
+      &:hover{
+        border: 2px solid $dark;
+        cursor: pointer;
+      }
+      &:active{
+        background: darken($Price-text-color, 20);
+        color: darken(#FFFFFF, 20);
+      }
+    }
+  }
+}
+hr{
+  height: 500px;
+  top: $size + 30px + 5px;
+  display: inline-block;
+  width: 1px;
+  margin: 0 20px;
+}
+
+.additional-info{
+  width: 1400px;
+  margin:auto;
+  box-sizing: border-box;
+  padding: 5px;
+  padding-top: 0;
+  background: $light;
+  @include border-radius(10px);
+  border: 0.1px;
+  .info-menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: $dark 3px solid;
+    border-radius: 10px;
+    li{
+      font-size: 6mm;
+      display: inline-block;
+      @include border-radius(5px);
+      border: 2px $dark solid;
+      box-sizing: border-box;
+      padding: 10px;
+      background: lighten($bg-color3,9);
+      color: $dark;
+      &:first-child{
+        margin-left: 10px;
+      }
+      &.active{
+        border-color: $Price-text-color;
+        background: darken(lighten($bg-color3,9),40);
+      }
+      &:hover{
+        cursor: pointer;
+        background: darken(lighten($bg-color3,9),20);
+      }
+    }
+  }
+  .Specifications{
+    ul{
+      list-style-type: none;
+      box-sizing: content-box;
+      margin: 0;
+      padding: 40px;
+      padding-top: 10px;
+      li{
+        font-size: 5mm;
+        display: inline-block;
+        width: Divide(2);
+        box-sizing: border-box;
+        padding: 4px;
+
+        span:first-child{
+          color: lighten(black, 70);
+        }
+        span{
+          color: $dark;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px){
+  .main{
+    width: 630px;
+  }
+  .product-info{
+    position: relative;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    display: block;
+    left:-100px
+  }
+  .image-panel{
+    position: unset;
+    margin: 0;
+  }
+  .additional-info{
+    margin: 0;
+    position: relative;
+
+    width: 630px;
+    .Specifications{
+      ul{
+        li{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

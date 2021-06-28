@@ -1,0 +1,73 @@
+@mixin appearance{
+  -ms-progress-appearance: unset;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+@mixin minus($a,$b)
+{
+  width: -webkit-calc(#{$a} - #{$b});
+  width:    -moz-calc(#{$a} - #{$b});
+  width:         calc(#{$a} - #{$b});
+}
+
+$menuwidth: 300px;
+aside{
+  width: $menuwidth;
+}
+.selectmenu{
+  margin-top: 1%;
+  display: inline-block;
+  height: auto;
+  position: fixed;
+  top: 70px;
+  width:  $menuwidth;
+  background: $bg-color3 * 0.5;
+  @include border-radius(20px);
+  label{
+    display: block;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    @include border-radius(10px);
+    background: $bg-color3 * 1.1;
+    font-size: 5mm;
+    padding: 10px 0 10px 15px;
+    font-family:"PT Sans", ariaal ,sans-serif;
+    color: $text-color2;
+    text-align: center;
+    span{
+      display: inline-block;
+      margin-top: 10px;
+    }
+    input{
+      display: inline-block;
+      @include appearance;
+      float: right;
+      margin-left: 20px;
+      box-sizing: border-box;
+      padding: 15px;
+      @include border-radius(50%);
+      border: 5px $dark solid;
+      background: $dark;
+      position: relative;
+      top: -5px;
+      &:checked
+      {
+        background: $bg-color;
+      }
+    }
+  }
+}
+$a: 100%;
+$b: $menuwidth + 50px;
+.products{
+  @extend .Featured;
+  background: $light * 0.9;
+}
+.cont{
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@import "single-product";

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style/change.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/ResponsiveMenu.js"></script>
+    <title>Contact</title>
+</head>
+    <body>
+        <header>
+            <nav>
+                <a href="Home.html"><img src="Images/logo.png" alt="logo" class="logo"></a>
+                <button id="theme-button">Dark</button>
+                <script src="scripts/dark.js"></script>
+                <form class="formsearch">
+                    <label><input type="text" name="Search" class="search"></label>
+                    <label><input type="submit" name="submit" class="search-button" value=""></label>
+                </form>
+                <ul class="navigation" id="menu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Shop.html">Shop</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Login.html">Log in</a></li>
+                </ul>
+                <a href="javascript:void(0);" class="burger"  onclick="Responsive()"> <i class="fa fa-bars"></i> </a>
+            </nav>
+        </header>
+        <div class="main-contact">
+            <div class="contact">CONTACT</div>
+            <div class="short-text">Tell us your problem</div>
+            <div class="Container">
+                <div>
+                    <form>
+                        <label>
+                            <input class="name" type="text" placeholder="Name:">
+                        </label>
+                        <label>
+                            <input class="email" type="email" placeholder="E-mail:">
+                        </label>
+                        <label>
+                            <select id="select-promlem">
+                            <option value="none">--Type of problem--</option>
+                            <option value="account">Account problems</option>
+                            <option value="seller">Problems with seller</option>
+                            <option value="product">Product</option>
+                        </select>
+                        </label>
+                        <label>
+                            <textarea class="description"  placeholder="Describe your problem... "></textarea>
+                        </label>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div><img src="Images/Location.png" alt="location icon"><a href="https://goo.gl/maps/Ty96VCt5k4T8PUw4A">4th of November, Bitola 7000</a></div>
+                    <div><img src="Images/Phone.png" alt="location icon"><span>071 298 360</span></div>
+                    <div><img src="Images/email.png" alt="location icon"><span>Vangel.trajkovski@finki.ukim.mk</span></div>
+                    <img src="Images/facebook.png" alt="fb"><img src="Images/Twitter.png" alt="twitter"><img src="Images/g+logo.png" alt="g+logo">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

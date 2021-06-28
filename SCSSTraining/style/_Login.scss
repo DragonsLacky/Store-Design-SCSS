@@ -1,0 +1,69 @@
+.login-text{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 8mm;
+  color: $dark;
+  padding: 40px;
+  text-align: center  ;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 200;
+}
+.login-form{
+  font-weight: bold;
+  width: 500px;
+  margin: auto;
+  background: darken($light, 25);
+  @include border-radius(10px);
+  box-sizing: border-box;
+  padding: 30px;
+  fieldset{
+    font-family: 'Noto Sans',Arial, sans-serif;
+    padding: 0;
+    margin: 20px;
+    height: 60px;
+    font-size: 5mm;
+    @include border-radius(20px);
+    background: lighten($light, 30);
+    color: $dark;
+    legend{
+      position: relative;
+      left: 20px;
+      cursor: default;
+    }
+    label{
+      width: 100%;
+      input{
+        background: lighten($light, 30);
+        border: none;
+        color: $dark;
+        width: 90%;
+        height: 50%;
+        font-size: 6mm;
+        margin-left: 30px;
+        position: relative;
+        outline: white;
+        &:active{
+          outline: white;
+        }
+        &::selection{
+          outline: none;
+        }
+      }
+    }
+    &::selection{
+      border: $link-hover-color solid 1px;
+    }
+  }
+  button{
+    @include button-style;
+    margin-left: 20px;
+    &:active{
+      outline: none;
+    }
+    &:nth-child(1){
+      background: $sign-up-color;
+    }
+    font-weight: bold;
+  }
+}

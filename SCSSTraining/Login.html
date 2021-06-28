@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style/change.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+    <script src="scripts/ResponsiveMenu.js"></script>
+
+</head>
+<body class="background">
+    <header>
+        <nav>
+            <a href="Home.html"><img src="Images/logo.png" alt="logo" class="logo"></a>
+            <button id="theme-button">Dark</button>
+            <script src="scripts/dark.js"></script>
+            <form class="formsearch">
+                <label><input type="text" name="Search" class="search"></label>
+                <label><input type="submit" name="submit" class="search-button" value=""></label>
+            </form>
+            <ul class="navigation" id="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Login.html">Log in</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="burger"  onclick="Responsive()"> <span class="fa fa-bars"></span> </a>
+        </nav>
+    </header>
+    <div class="login-text">
+        <span>Please login or sign up here</span>
+    </div>
+    <div class="login-form">
+        <form>
+            <fieldset>
+                <legend>E-mail or Username</legend>
+                <label>
+                    <input type="text">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Password</legend>
+                <label>
+                    <input type="password">
+                </label>
+            </fieldset>
+            <button type="submit">Log in</button><button>Sign up</button>
+        </form>
+    </div>
+</body>
+</html>
